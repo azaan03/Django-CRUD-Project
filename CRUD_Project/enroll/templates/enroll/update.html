@@ -1,0 +1,29 @@
+{% extends 'enroll/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header bg-primary text-white text-center">
+                    <h5>Add New User</h5>
+                </div>
+                <div class="card-body">
+                    <!-- Form to Add New User -->
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-dark w-100 mt-4">
+                            <i class="fas fa-save"></i> Add User
+                        </button>
+                    </form>
+                    <!-- Back to Operations Button -->
+                    <a href="{% url 'crud_operations' %}" class="btn btn-dark w-100 mt-3">
+                        <i class="fas fa-arrow-left"></i> Back to Operations
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

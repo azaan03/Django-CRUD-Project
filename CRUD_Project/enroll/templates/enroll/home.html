@@ -1,0 +1,72 @@
+{% extends 'enroll/base.html' %}
+
+{% block content %}
+    <div class="container mt-3">
+        <!-- Styled Bar with Project Description and New Call-to-Action -->
+        <div class="text-center py-3 mb-4" style="border-radius: 8px;">
+            <h2 class="mb-0" style="font-family: 'Arial', sans-serif; font-size: 1.8rem; font-weight: bold; color: black;">
+                Manage Your Data Seamlessly with This CRUD Application
+            </h2>
+            <p class="mt-2" style="font-family: 'Arial', sans-serif; font-size: 1.1rem; color: black;">
+                This application provides an easy and efficient way to manage your data. With features like adding, updating, and deleting records, you can easily handle your information with just a few clicks.
+            </p>
+            <!-- Replaced Getting Started Button with a new call-to-action -->
+            <div class="text-center mt-3">
+                <a href="{% url 'crud_operations' %}" class="btn btn-lg" style="background-color:rgb(6, 8, 6); color: white; border: none; border-radius: 8px;">
+                    <i class="fas fa-cogs"></i> Start Managing Your Data
+                </a>
+            </div>
+        </div>
+
+        <!-- Functionalities Blocks (Adjusted Layout) -->
+        <div class="row text-center">
+            <!-- Add Data Block -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100" style="border: 1px solid rgb(36, 52, 45); background-color: white; color: black; border-radius: 15px; transition: transform 0.3s;">
+                    <div class="card-body">
+                        <i class="fas fa-database fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Add Data</h5>
+                        <p class="card-text">
+                            Add new records and expand your database effortlessly.
+                        </p>
+                        <a href="{% url 'crud_operations' %}" class="btn" style="background-color: rgb(3, 79, 187); color: white; border: none; border-radius: 8px;">
+                            <i class="fas fa-plus-circle"></i> Import Data
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Update Data Block -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100" style="border: 1px solid rgb(36, 52, 45); background-color: white; color: black; border-radius: 15px; transition: transform 0.3s;">
+                    <div class="card-body">
+                        <i class="fas fa-edit fa-3x text-warning mb-3"></i>
+                        <h5 class="card-title">Update Data</h5>
+                        <p class="card-text">
+                            Modify and improve existing records to keep them fresh.
+                        </p>
+                        <a href="{% url 'crud_operations' %}" class="btn" style="background-color: yellow; color: black; border: none; border-radius: 8px;">
+                            <i class="fas fa-sync-alt"></i> Update Records
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delete Data Block -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100" style="border: 1px solid rgb(36, 52, 45); background-color: white; color: black; border-radius: 15px; transition: transform 0.3s;">
+                    <div class="card-body">
+                        <i class="fas fa-trash-alt fa-3x text-danger mb-3"></i>
+                        <h5 class="card-title">Delete Data</h5>
+                        <p class="card-text">
+                            Easily remove unwanted records from your database.
+                        </p>
+                        <a href="{% url 'crud_operations' %}" class="btn" style="background-color: red; color: white; border: none; border-radius: 8px;">
+                            <i class="fas fa-minus-circle"></i> Delete Records
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
